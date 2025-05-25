@@ -98,6 +98,8 @@ func (p Proxy) MarshalYAML() (interface{}, error) {
 		return ProxyToHysteria(p), nil
 	case "hysteria2":
 		return ProxyToHysteria2(p), nil
+	case "anytls":
+		return ProxyToAnytls(p), nil
 	default:
 		return _Proxy(p), nil
 	}
